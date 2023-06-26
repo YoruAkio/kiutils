@@ -3,3 +3,9 @@
 yarn.lock
 node_modules
 Test
+reconlx-api
+src/
+docs/
+tests/
+tsconfig.json
+.prettierrc.json

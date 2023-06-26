@@ -1,17 +1,20 @@
 {
-  "compilerOptions": {
-    "module": "CommonJS",
-    "target": "ESNext",
-    "sourceMap": true,
-    "allowJs": true,
-    "checkJs": true,
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "outDir": "./dist",
-    "noImplicitAny": true,
-    "declaration": true,
-    "strict": false,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
-  }
+    "compilerOptions": {
+        "lib": ["ES2015", "DOM"],
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "target": "ESNext",
+        "declaration": true,
+        "outDir": "dist",
+        "sourceMap": true,
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "allowSyntheticDefaultImports": true,
+        "skipLibCheck": true,
+        "skipDefaultLibCheck": true,
+        "resolveJsonModule": true
+    },
+    "include": ["./src"],
+    "exclude": ["./node_modules"]
 }

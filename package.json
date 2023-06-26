@@ -1,13 +1,13 @@
 {
-  "name": "kio-utility",
-  "version": "0.0.1",
+  "name": "kiutils",
+  "version": "0.0.5",
   "description": "🎑 (Library) an Javascript library that provide various utilities, including Image manipulation tools, Discord-related utilities, and a logger.",
-  "main": "index.js",
-  "files": [
-    "./dist"
-  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "docs": "typedoc src/index.ts --excludePrivate -out kiutils-docs",
+    "test": "ts-node tests/index.ts"
   },
   "repository": {
     "type": "git",
@@ -20,15 +20,21 @@
   },
   "homepage": "https://github.com/YoruAkio/kiutils#readme",
   "dependencies": {
+    "@napi-rs/canvas": "^0.1.41",
     "axios": "^1.4.0",
-    "discord.js": "^14.11.0",
     "fs": "^0.0.1-security",
-    "mongoose": "^7.3.1",
+    "jsdom": "^22.1.0",
     "ms": "^2.1.3",
-    "ultrax": "^2.0.5"
+    "node-fetch": "2",
+    "prettier": "^2.8.8",
+    "sourcebin": "^5.0.0"
   },
   "devDependencies": {
     "@types/node": "^20.3.1",
-    "eslint": "^8.43.0"
+    "discord.js": "^14.11.0",
+    "mongoose": "^7.3.1",
+    "ts-node": "^10.9.1",
+    "typedoc": "^0.24.8",
+    "typescript": "^5.1.3"
   }
 }
