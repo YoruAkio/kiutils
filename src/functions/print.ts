@@ -1,11 +1,14 @@
 /**
- * Prints the input to the console
- * @param {string} input - The text to print
- * @returns {void}
+ * Prints the input to the console as string
+ * @param {any} input - The text to print
+ * @returns {Promise<void>}
  * @example
  * const { print } = require("kiutils")
- * print("Hello World")
+ * print("Hello World").then(console.log)
  */
-export function print(input: string): void {
-    console.log(input)
+export async function print(input: any): Promise<void> {
+    const value = input as string
+    if (!value) throw new Error("The parameter 'input' is missing")
+
+    console.log(value)
 }

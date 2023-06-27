@@ -1,4 +1,4 @@
-import { CanvasData } from "../typings"
+import { CanvasData } from "../typings/interfaces"
 
 const canvas = require("@napi-rs/canvas")
 
@@ -10,15 +10,28 @@ const canvas = require("@napi-rs/canvas")
  * @property {string} fontColor - The font color of the canvas
  */
 
-/**
- * The Canvas class
- */
 export class Canvas {
     data: CanvasData
+    
     /**
-     * The constructor function
+     * The Canvas constructor
+     * @constructor
      * @param {CanvasData} options - The canvas data
+     * @example
+     * const { Canvas } = require("kiutils")
+     * const canvas = new Canvas({
+     *     width: 500,
+     *     height: 500,
+     *     background: {
+     *         image: "color",
+     *         color: "#23272A"
+     *     },   
+     *     fontColor: "#ffffff"
+     * })
+     * 
+     * canvas.render()
      */
+
     constructor() {
         this.data = {
             width: 0,

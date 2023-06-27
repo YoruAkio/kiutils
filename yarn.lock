@@ -131,7 +131,7 @@
   resolved "https://registry.yarnpkg.com/@napi-rs/canvas-win32-x64-msvc/-/canvas-win32-x64-msvc-0.1.41.tgz#41652565110359d300a7bd4ce86861efb25e10ec"
   integrity sha512-e2L/VLJR/glc0vUACVBSL+VpbrfIRRuJU183t5jrOnaLFvVZHH/0iCF9ph9CUN/kKSg2cU84oGrnfJIsuPglSQ==
 
-"@napi-rs/canvas@^0.1.41":
+"@napi-rs/canvas@^0.1.29", "@napi-rs/canvas@^0.1.41":
   version "0.1.41"
   resolved "https://registry.yarnpkg.com/@napi-rs/canvas/-/canvas-0.1.41.tgz#babd041abc1c243ee90c7f36cc5b649d116b21b0"
   integrity sha512-JjdMfKyXox09KgC3fNB4+x0M/rwufIWrfcBDU0BuF6jKVhlSSSNy7D2WEX4zs5NgWHeiArHCXLtJ0dW6KyK7GQ==
@@ -163,6 +163,13 @@
   version "3.5.1"
   resolved "https://registry.npmjs.org/@sapphire/snowflake/-/snowflake-3.5.1.tgz"
   integrity sha512-BxcYGzgEsdlG0dKAyOm0ehLGm2CafIrfQTZGWgkfKYbj+pNNsorZ7EotuZukc2MT70E0UbppVbtpBrqpzVzjNA==
+
+"@skyra/gifenc@^1.0.0":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@skyra/gifenc/-/gifenc-1.0.1.tgz#7330de98944fd0b46405ccb8712d2e7114b3ab2e"
+  integrity sha512-kxu65ZchumEKWnFwPwy+/T2+/lzQZtwK6f5VTG3OJIBqvfdyRyxrWvbeBHT6G8p6nBEuxSwyI3YXTv2koXvHVQ==
+  dependencies:
+    tslib "^2.4.0"
 
 "@sourcebin/linguist@^0.0.3":
   version "0.0.3"
@@ -306,6 +313,23 @@ busboy@^1.6.0:
   integrity sha512-8SFQbg/0hQ9xy3UNTB0YEnsNBbWfhf7RtnzpL7TkBiTBRfrQ9Fxcnz7VJsleJpyp6rVLvXiuORqjlHi5q+PYuA==
   dependencies:
     streamsearch "^1.1.0"
+
+canvacord@^5.4.10:
+  version "5.4.10"
+  resolved "https://registry.yarnpkg.com/canvacord/-/canvacord-5.4.10.tgz#a5b66c0ac4b76d198374c8343001fbd4e143670a"
+  integrity sha512-uH4kIRsk0KVT6RBAgCO5ThQF7uJIWaA4L7tE/UNPVXRfj4+OjvXwIU94iOyBG3Bdj53un+QwQSUVDcr27QGUPA==
+  dependencies:
+    "@napi-rs/canvas" "^0.1.29"
+    "@skyra/gifenc" "^1.0.0"
+    chalk "^5.0.1"
+    moment "^2.29.4"
+    moment-duration-format "^2.3.2"
+    node-fetch "2.6.7"
+
+chalk@^5.0.1:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/chalk/-/chalk-5.2.0.tgz#249623b7d66869c673699fb66d65723e54dfcfb3"
+  integrity sha512-ree3Gqw/nazQAPuJJEy+avdl7QfZMcUvmHIKgEZkGL+xOBzRvup5Hxo6LHuMceSxOabuJLJm5Yp/92R9eMmMvA==
 
 combined-stream@^1.0.8:
   version "1.0.8"
@@ -566,6 +590,16 @@ minimatch@^9.0.0:
   dependencies:
     brace-expansion "^2.0.1"
 
+moment-duration-format@^2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/moment-duration-format/-/moment-duration-format-2.3.2.tgz#5fa2b19b941b8d277122ff3f87a12895ec0d6212"
+  integrity sha512-cBMXjSW+fjOb4tyaVHuaVE/A5TqkukDWiOfxxAjY+PEqmmBQlLwn+8OzwPiG3brouXKY5Un4pBjAeB6UToXHaQ==
+
+moment@^2.29.4:
+  version "2.29.4"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.4.tgz#3dbe052889fe7c1b2ed966fcb3a77328964ef108"
+  integrity sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==
+
 mongodb-connection-string-url@^2.6.0:
   version "2.6.0"
   resolved "https://registry.npmjs.org/mongodb-connection-string-url/-/mongodb-connection-string-url-2.6.0.tgz"
@@ -587,7 +621,7 @@ mongodb@5.6.0:
 
 mongoose@^7.3.1:
   version "7.3.1"
-  resolved "https://registry.npmjs.org/mongoose/-/mongoose-7.3.1.tgz"
+  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-7.3.1.tgz#833bfc29a4f5cc7c4eacf4b1495d1ebe206ec409"
   integrity sha512-6289bmSIhvR8xMHsYe2/CuzN7wHK+2RHcK7idDdzniCPC5zix5JH0Hc4k3CmXlr/9zQ2250gUQiUWtvDB0vF1Q==
   dependencies:
     bson "^5.3.0"
@@ -624,6 +658,13 @@ node-fetch@2:
   version "2.6.11"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.11.tgz#cde7fc71deef3131ef80a738919f999e6edfff25"
   integrity sha512-4I6pdBY1EthSqDmJkiNk3JIT8cswwR9nfeW/cPdUagJYEQG7R95WRH74wpz7ma8Gh/9dI9FP+OU+0E4FvtA55w==
+  dependencies:
+    whatwg-url "^5.0.0"
+
+node-fetch@2.6.7:
+  version "2.6.7"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.7.tgz#24de9fba827e3b4ae44dc8b20256a379160052ad"
+  integrity sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==
   dependencies:
     whatwg-url "^5.0.0"
 
@@ -848,7 +889,7 @@ ts-node@^10.9.1:
     v8-compile-cache-lib "^3.0.1"
     yn "3.1.1"
 
-tslib@^2.5.0:
+tslib@^2.4.0, tslib@^2.5.0:
   version "2.5.3"
   resolved "https://registry.npmjs.org/tslib/-/tslib-2.5.3.tgz"
   integrity sha512-mSxlJJwl3BMEQCUNnxXBU9jP4JBktcEGhURcPR6VQVlnP0FdDEsIaz0C35dXNGLyRfrATNofF0F5p2KPxQgB+w==

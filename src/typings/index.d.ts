@@ -1,1 +1,0 @@
-export { CanvasData } from "./canvas"
