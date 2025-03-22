@@ -33,6 +33,9 @@ jobs:
       - name: Install dependencies
         run: npm install
       
+      - name: Install TypeDoc Material Theme
+        run: npm install --save-dev typedoc-material-theme
+      
       - name: Check git status
         run: git status
 
@@ -74,8 +77,35 @@ jobs:
       - name: Build package
         run: npm run build
         
-      - name: Generate TypeDoc documentation
-        run: npm run docs
+      - name: Generate TypeDoc documentation with Material Theme
+        run: |
+          # Create typedoc.json configuration file
+          cat > typedoc.json << EOF
+          {
+            "entryPoints": ["src/index.ts"],
+            "out": "docs",
+            "plugin": ["typedoc-material-theme"],
+            "theme": "material",
+            "name": "kiutils",
+            "includeVersion": true,
+            "navigationLinks": {
+              "GitHub": "https://github.com/YoruAkio/kiutils",
+              "NPM": "https://www.npmjs.com/package/kiutils"
+            },
+            "visibilityFilters": {
+              "protected": true,
+              "private": false,
+              "inherited": true,
+              "external": true
+            },
+            "excludePrivate": true,
+            "excludeProtected": false,
+            "categorizeByGroup": true,
+            "searchInComments": true
+          }
+          EOF
+          # Run TypeDoc with the configuration
+          npx typedoc
         
       - name: Commit updated documentation
         run: |
