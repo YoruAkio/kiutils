@@ -1,6 +1,6 @@
 {
     "name": "kiutils",
-    "version": "0.0.9",
+    "version": "0.0.10",
     "description": "🎑 (Library) an Javascript library that provide various utilities, including Image manipulation tools, Discord-related utilities, and a logger.",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
