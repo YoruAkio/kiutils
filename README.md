@@ -3,7 +3,6 @@
   <p>A powerful JavaScript/TypeScript utility library for image manipulation, Discord utilities, and more!</p>
   
   [![npm version](https://img.shields.io/npm/v/kiutils.svg?style=flat-square)](https://www.npmjs.org/package/kiutils)
-  [![install size](https://packagephobia.com/badge?p=kiutils)](https://packagephobia.com/result?p=kiutils)
   [![npm downloads](https://img.shields.io/npm/dm/kiutils.svg?style=flat-square)](http://npm-stat.com/charts.html?package=kiutils)
   [![License](https://img.shields.io/github/license/YoruAkio/kiutils)](https://github.com/YoruAkio/kiutils/blob/main/LICENSE)
 </div>
