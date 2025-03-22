@@ -22,6 +22,9 @@
         "type": "git",
         "url": "git+https://github.com/YoruAkio/kiutils.git"
     },
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com"
+    },
     "author": "YoruAkio",
     "license": "MIT",
     "bugs": {
