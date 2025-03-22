@@ -31,7 +31,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Get latest version from package.json
         id: current_version
@@ -40,7 +40,9 @@ jobs:
       - name: Determine version update type
         id: version_update
         run: |
-          if [[ "${{ github.event.head_commit.message }}" == *"#major"* ]]; then
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ github.event.inputs.version }}" != "" ]]; then
+            echo "update_type=${{ github.event.inputs.version }}" >> $GITHUB_OUTPUT
+          elif [[ "${{ github.event.head_commit.message }}" == *"#major"* ]]; then
             echo "update_type=major" >> $GITHUB_OUTPUT
           elif [[ "${{ github.event.head_commit.message }}" == *"#minor"* ]]; then
             echo "update_type=minor" >> $GITHUB_OUTPUT
