@@ -1,4 +1,13 @@
-const fetch = require("node-fetch")
+import fetch from "node-fetch";
+
+export enum WaifuType {
+    SFW = "sfw",
+    NSFW = "nsfw"
+}
+
+interface WaifuResponse {
+    url: string;
+}
 
 /**
  * @typedef {Object} WaifuData
@@ -11,9 +20,17 @@ const fetch = require("node-fetch")
  *
  * // => "https://..."
  */
-
-export async function waifu(type: "sfw" | "nsfw" = "sfw") {
-    const res = await fetch(`https://api.waifu.pics/${type}/waifu`)
-    const data = await res.json()
-    return data.url
+export async function waifu(type: WaifuType = WaifuType.SFW): Promise<string> {
+    try {
+        const res = await fetch(`https://api.waifu.pics/${type}/waifu`);
+        
+        if (!res.ok) {
+            throw new Error(`Failed to fetch waifu: ${res.statusText}`);
+        }
+        
+        const data = await res.json() as WaifuResponse;
+        return data.url;
+    } catch (error) {
+        throw new Error(`Error fetching waifu: ${error instanceof Error ? error.message : String(error)}`);
+    }
 }

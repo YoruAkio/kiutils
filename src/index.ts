@@ -1,13 +1,32 @@
-// Function
-export { print } from "./functions/print"
-export { bin } from "./functions/bin"
-export { randString } from "./functions/randString"
-export { waifu } from "./functions/waifu"
+// Functions
+export * from './functions/print';
+export * from './functions/bin';
+export * from './functions/randString';
+export * from './functions/waifu';
+export * from './functions/utils';
+export * from './functions/imageConverter';
 
-// Class
-export { Canvas } from "./classes/canvas"
+// Classes
+export * from './classes/canvas';
+export * from './classes/discord';
 
 // Typings
-export * from '@typings/interfaces'
-export type * from '@typings/types'
-export * from '@typings/enums'
+export * from './typings/interfaces';
+export * from './typings/types';
+export * from './typings/enums';
+// Functions
+export * from './functions/print';
+export * from './functions/bin';
+export * from './functions/randString';
+export * from './functions/waifu';
+export * from './functions/utils';
+export * from './functions/imageConverter';
+
+// Classes
+export * from './classes/canvas';
+export * from './classes/discord';
+
+// Typings
+export * from './typings/interfaces';
+export * from './typings/types';
+export * from './typings/enums';

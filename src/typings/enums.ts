@@ -15,5 +15,3 @@ export enum ProgressBarType {
     COLOR = "color",
     GRADIENT = "gradient"
 }
-
-export enum B {}

@@ -1,14 +1,31 @@
-const fs = require("fs")
+import * as fs from "fs";
+import * as fsPromises from "fs/promises";
 
 export class Utils {
     /**
      * Writes the data as file
-     * @param {Buffer} data data to write
+     * @param {Buffer|string} data data to write
      * @param {string} name file name
      * @returns {void}
      */
-    static write(data, name) {
-        return fs.writeFileSync(name, data)
+    static write(data: Buffer | string, name: string): void {
+        if (!data) throw new Error("The parameter 'data' is missing");
+        if (!name) throw new Error("The parameter 'name' is missing");
+        
+        return fs.writeFileSync(name, data);
+    }
+
+    /**
+     * Asynchronously writes the data as file
+     * @param {Buffer|string} data data to write
+     * @param {string} name file name
+     * @returns {Promise<void>}
+     */
+    static async writeAsync(data: Buffer | string, name: string): Promise<void> {
+        if (!data) throw new Error("The parameter 'data' is missing");
+        if (!name) throw new Error("The parameter 'name' is missing");
+        
+        return fsPromises.writeFile(name, data);
     }
 
     /**
@@ -21,7 +38,20 @@ export class Utils {
      * console.log(data.toString())
      * // => "Hello World!"
      */
-    static read(name) {
-        return fs.readFileSync(name)
+    static read(name: string): Buffer {
+        if (!name) throw new Error("The parameter 'name' is missing");
+        
+        return fs.readFileSync(name);
+    }
+
+    /**
+     * Asynchronously reads the file as buffer
+     * @param {string} name file name
+     * @returns {Promise<Buffer>} file data
+     */
+    static async readAsync(name: string): Promise<Buffer> {
+        if (!name) throw new Error("The parameter 'name' is missing");
+        
+        return fsPromises.readFile(name);
     }
 }
