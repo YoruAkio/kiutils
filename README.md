@@ -1,5 +1,4 @@
 <div align="center">
-  <img src="https://i.imgur.com/8hNtTUH.png" alt="kiutils logo" width="200" height="200">
   <h1>🎑 kiutils</h1>
   <p>A powerful JavaScript/TypeScript utility library for image manipulation, Discord utilities, and more!</p>
   
@@ -165,4 +164,4 @@ Feel free to check the [issues page](https://github.com/YoruAkio/kiutils/issues)
 
 ## 📝 License
 
-This project is [Apache-2.0](https://github.com/YoruAkio/kiutils/blob/main/LICENSE) licensed.
+This project is [MIT](https://github.com/YoruAkio/kiutils/blob/main/LICENSE) licensed.

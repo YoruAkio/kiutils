@@ -1,6 +1,6 @@
 {
     "name": "kiutils",
-    "version": "0.0.6",
+    "version": "0.0.8",
     "description": "🎑 (Library) an Javascript library that provide various utilities, including Image manipulation tools, Discord-related utilities, and a logger.",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -15,7 +15,8 @@
         "dev": "ts-node src/index.ts",
         "clean": "rm -rf dist",
         "prebuild": "npm run clean",
-        "prepare": "npm run build"
+        "prepare": "npm run build",
+        "publish": "npm publish --access public"
     },
     "repository": {
         "type": "git",
@@ -27,6 +28,22 @@
         "url": "https://github.com/YoruAkio/kiutils/issues"
     },
     "homepage": "https://github.com/YoruAkio/kiutils#readme",
+    "keywords": [
+        "utilities",
+        "discord",
+        "rank-card",
+        "image-manipulation",
+        "image-converter",
+        "canvas",
+        "thumbnails",
+        "waifu",
+        "anime",
+        "sourcebin",
+        "code-sharing",
+        "typescript",
+        "javascript",
+        "nodejs"
+    ],
     "dependencies": {
         "@napi-rs/canvas": "^0.1.41",
         "axios": "^1.4.0",
