@@ -32,6 +32,16 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+      
+      - name: Check git status
+        run: git status
+
+      - name: Commit any changes from npm install
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git diff-index --quiet HEAD || git commit -m "Update dependencies [skip ci]"
 
       - name: Get latest version from package.json
         id: current_version
